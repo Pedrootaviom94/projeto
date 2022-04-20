@@ -1,0 +1,23 @@
+@model Servico
+
+<h1>Qual Serviço?</h1>
+</br>
+
+<form method="POST" asp-controller="Home" asp-action="Solicitar">
+  <p>
+    <label asp-for="descricao">Qual o produto desejado: </label>
+    <input asp-for="descricao">
+  </p>
+
+  <p>
+    <label asp-for="valor_unitario">Qaul valor do produto: R$ </label>
+    <input asp-for="valor_unitario">
+  </p>
+
+  <p>
+    <label asp-for="quantidade">Qual a quantidade desejada: </label>
+    <input asp-for="quantidade">
+  </p>
+
+  <input type="submit" value="Solicitar Pedido">
+</form>

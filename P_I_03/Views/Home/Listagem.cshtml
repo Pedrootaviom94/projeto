@@ -1,0 +1,24 @@
+@model Orcamento
+
+<h2>Seu orcamento e:</h2>
+
+<table>
+
+  <tr>
+    <th>Produto  </th>
+    <th>quantidade  </th>
+    <th>valor da unidade </th>
+  </tr>
+  @foreach (Servico ser in Model.solicitados)
+  {
+    <tr>
+      <td>@ser.descricao</td>
+      <td>@ser.quantidade</td>
+      <td>@ser.valor_unitario</td>
+    </tr>
+  }
+</table>
+<br>
+<br>
+<p>O Total do seu pedido é: R$ </b> @Model.ValorTotalSolicitado()</p>
+<p>Itens adicionados: </b> @Model.QuantidadeSolicitados()</p>
